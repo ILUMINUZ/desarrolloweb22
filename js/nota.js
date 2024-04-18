@@ -1,30 +1,34 @@
-// Función para generar una nota aleatoria entre 20 y 100
-function generarNotaAleatoria() {
-    return Math.floor(Math.random() * (100 - 20 + 1)) + 20;
+//Variable globales
+let notas=[{nombre:'Juan',nota:0},
+            {nombre:'Maria',nota:0},
+            {nombre:'Jose',nota:0},
+            {nombre:'Rene',nota:0},
+            {nombre:'Pedro',nota:0},];
+function genRandomico($max,$min){
+    return Math.floor(Math.random()*($max-$min+1)+2);
 }
-
-// Arreglo de nombres
-let nombres = ['Juan', 'María', 'Carlos', 'Laura', 'Ana', 'Pedro', 'Sofía', 'Diego', 'Elena', 'Luis'];
-
-// Generar notas aleatorias para cada nombre y almacenarlas en un arreglo
-let notas = nombres.map(nombre => generarNotaAleatoria());
-
-// Calcular la nota más alta
-let notaMaxima = Math.max(...notas);
-
-// Calcular la nota más baja
-let notaMinima = Math.min(...notas);
-
-// Calcular el promedio de las notas
-let promedio = notas.reduce((total, nota) => total + nota, 0) / notas.length;
-
-// Mostrar la lista de notas
-console.log("Lista de notas:");
-nombres.forEach((nombre, index) => {
-    console.log(`${nombre}: ${notas[index]}`);
-});
-
-console.log("\nResumen:");
-console.log("Nota más alta:", notaMaxima);
-console.log("Nota más baja:", notaMinima);
-console.log("Promedio de notas:", promedio);
+function cargarnotas(){
+    notas.forEach(nota=>{
+        nota.nota=genRandomico(10,2);
+    });
+}
+function fclasificar(nota){
+    let $clasificar;
+        switch(nota){
+            case 2: case 3: case 4:
+                $clasificar="Insuficiente";
+                break;
+            case 5: case 6:
+                $clasificar="Suficiente";
+                break;
+            case 7: case 8:
+                $clasificar="Bien";
+                break;
+            case 10: 
+                $clasificar="NOtable";
+                break;
+            default:
+                $clasificar="Fuera de rango"
+        }
+        return $clasificar;
+}
