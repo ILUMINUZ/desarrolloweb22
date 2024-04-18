@@ -18,26 +18,40 @@ console.log(carrito);
 carrito.push("arroz", 5);
 console.log(carrito);
 */
-
+/*
 let item = { nombre: 'Leche', cantidad: 1 };
 console.log("Item: " + item.nombre);
 console.log("Cantidad: " + item.cantidad);
 
-let carrito = [
-    { nombre: 'Leche', cantidad: 1, precio: '4.5bs', total: '4.5' },
-    { nombre: 'Carne', cantidad: 2, precio: '7.5bs', total: '15bs' },
-    { nombre: 'Fideo', cantidad: 1, precio: '3.5bs', total: '3.5bs' },
-    { nombre: 'Papa', cantidad: 3, precio: '5.5bs', total: '16.5bs' }
-];
-console.log(carrito);
-
-item = { nombre: 'Arroz', cantidad: 5, precio: '4bs', total: '20bs' };
-carrito.push(item);
-console.log(carrito);
-
-// Imprimirlo con etiquetas
-// Adicionar un nuevo registro
 console.log("Item: " + item.nombre);
 console.log("Cantidad: " + item.cantidad);
-console.log("Precio: " + item.precio);
-console.log("Total: " + item.total);
+console.log("Precio: " + item.precio+"Bs");
+console.log("Total: " + item.cantidad*item.precio+"Bs");
+*/
+let carrito = [{ nombre: 'Leche', cantidad: 1, precio: 7.5 },
+    { nombre: 'Carne', cantidad: 2, precio: 30.5},
+    { nombre: 'Fideo', cantidad: 1, precio: 5.5},
+    { nombre: 'Papa', cantidad: 3, precio: 20.5}];
+item = { nombre: 'Arroz', cantidad: 2, precio: 30.5};
+carrito.push(item);
+
+let carrito2 = [{ nombre: 'Leche', cantidad: 1, precio: 7.5 },
+    { nombre: 'Carne', cantidad: 2, precio: 30.5},
+    { nombre: 'Fideo', cantidad: 1, precio: 5.5},
+    { nombre: 'Papa', cantidad: 3, precio: 20.5}];
+item = { nombre: 'Arroz', cantidad: 2, precio: 30.5};
+carrito2.push(item);
+//Buscar funciones o procesos para ordenar un array
+//Ordenar el array de carrito
+//Ordenar un array lineal
+/*let numeros=[4,2,6,1,8,3,10];
+numeros.sort((a,b)=>a-b);
+console.log(numeros);
+*/
+console.log("IMPRESION ORDENADA POR PRECIO");
+carrito2.sort((x,y)=>x.precio - y.precio);
+console.log(carrito2);
+
+console.log("IMPRESION ORDENADA POR NOMBRE");
+carrito.sort((a,b)=>a.nombre.localeCompare(b.nombre));
+console.log(carrito);
