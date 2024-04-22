@@ -1,0 +1,63 @@
+/* Estilo básico para todos los divs con clase "content" */
+div.content {
+    border: 1px solid rgb(255, 7, 7); /* Borde rojo */
+    opacity: 0.25; /* Opacidad baja */
+    padding: 10px; /* Espaciado interno */
+    margin: 10px 0; /* Margen externo */
+    transition: all 0.3s ease-in-out; /* Transición suave */
+}
+
+/* Estilo para resaltar (highlight) */
+div.content.highlight {
+    border: 1px solid rgb(238, 89, 4); /* Borde naranja */
+    opacity: 1; /* Opacidad completa */
+}
+
+/* Estilos generales para el cuerpo del documento */
+body {
+    font-family: Arial, sans-serif; /* Establece la fuente */
+    background-color: #f0f0f0; /* Color de fondo */
+    color: #333; /* Color del texto */
+    padding: 20px; /* Espaciado alrededor */
+}
+
+/* Estilos para botones */
+button {
+    background-color: rgb(238, 89, 4); /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    cursor: pointer; /* Cursor en forma de mano */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+button:hover {
+    background-color: rgb(255, 100, 50); /* Cambio de color al pasar el cursor */
+}
+
+/* Estilos para formularios */
+form {
+    display: flex;
+    flex-direction: column; /* Alineación vertical */
+}
+
+label {
+    font-weight: bold; /* Resalta los textos de las etiquetas */
+}
+
+input {
+    padding: 5px; /* Espaciado interno */
+    margin-bottom: 10px; /* Margen entre campos */
+}
+
+input[type="submit"] {
+    background-color: rgb(238, 89, 4); /* Color del botón de envío */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    cursor: pointer; /* Cursor en forma de mano */
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(255, 100, 50); /* Cambio de color al pasar el cursor */
+}

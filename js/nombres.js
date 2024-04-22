@@ -40,12 +40,12 @@ function generarNomApe(){
     for(let i=0;i<NELEMENTOS; i++){
         nomal=nombres[Math.floor(Math.random()*nombres.length-1)];
         apeal=apellidos[Math.floor(Math.random()*apellidos.length)];
-        nomape.push(nomal+""+apeal);
+        nomape.push(nomal+ " " +apeal);
     }
 }
 function imprimir(){
     nomape.forEach(persona=>{
-        console.log(persona+"\n");
+        console.log(persona + "\n");
     });
 }
 generarNomApe();

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios de Alumnos</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css"> <!-- Agregar hoja de estilo -->
+    <script>
+        // Función para alternar la visibilidad de un formulario
+        function toggleFormulario(id) {
+            document.getElementById(id).classList.toggle('highlight');
+        }
+    </script>
+</head>
+<body>
+    <h1>Formularios de Alumnos</h1>
+    <p>
+        <!-- Botones para alternar la visibilidad de los formularios -->
+        <button onClick="toggleFormulario('content_first')">Registro de Alumnos</button>
+        <button onClick="toggleFormulario('content_second')">Notas</button>
+        <button onClick="toggleFormulario('content_third')">Materias</button>
+    </p>
+    
+    <!-- Formulario de Registro de Alumnos -->
+    <div class="content" id="content_first" style="display: none;"> <!-- Inicialmente oculto -->
+        <h2>Registro de Alumnos</h2>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion"><br><br>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono"><br><br>
+            
+            <input type="submit" value="Registrar">
+        </form>
+    </div>
+    
+    <!-- Formulario de Notas -->
+    <div class="content" id="content_second" style="display: none;"> <!-- Inicialmente oculto -->
+        <h2>Formulario de Notas</h2>
+        <form>
+            <label for="alumno">Alumno:</label>
+            <input type="text" id="alumno" name="alumno" required><br><br>
+
+            <label for="materia">Materia:</label>
+            <input type="text" id="materia" name="materia" required><br><br>
+
+            <label for="nota">Nota:</label>
+            <input type="number" id="nota" name="nota" min="0" max="100" required><br><br>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+    
+    <!-- Formulario de Materias -->
+    <div class="content" id="content_third" style="display: none;"> <!-- Inicialmente oculto -->
+        <h2>Formulario de Materias</h2>
+        <form>
+            <label para="codigo_materia">Código de Materia:</label>
+            <input type="text" id="codigo_materia" name="codigo_materia" required><br><br>
+
+            <label para="nombre_materia">Nombre:</label>
+            <input type="text" id="nombre_materia" name="nombre_materia" required><br><br>
+
+            <label para="semestre">Semestre:</label>
+            <input type="number" id="semestre" name="semestre" min="1" required><br><br>
+
+            <input type="submit" value="Registrar">
+        </form>
+    </div>
+    
+</body>
+</html>

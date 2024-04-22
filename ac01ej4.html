@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Conteo de Letras y Vocales</title>
+    <script src="js/ac01ej4.js"></script> <!-- Vincula el archivo JavaScript -->
+</head>
+<body>
+    <h2>Ingrese una frase</h2>
+    <form onsubmit="return analizarFrase()"> <!-- Llama a la función para analizar la frase -->
+        <textarea id="frase" rows="3" cols="40" required></textarea> <!-- Campo para ingresar la frase -->
+        <br><br>
+        <button type="submit">Analizar</button> <!-- Botón para enviar el formulario -->
+    </form>
+    <h3>Resultados:</h3>
+    <p id="resultado"></p> <!-- Donde se mostrarán los resultados -->
+</body>
+</html>

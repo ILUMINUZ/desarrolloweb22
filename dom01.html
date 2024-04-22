@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8"/>
+    <title>Manipulación HTML con JavaScript</title>
+</head>
+<body>
+<div class="content" id="content_first">
+    <p>Contenido dinámico aquí</p>
+</div><!-- #content first-->
+<div class="content" id="content_second" hidden>
+    <p>Segunda sección</p>
+</div><!--#content second -->
+<script>
+    let body = document.getElementsByTagName("body")[0];
+    // Obtener todos los elementos
+    let elementos = document.getElementsByTagName("*");
+    console.log(elementos);
+    // Iterar sobre los elementos
+    for (elemento of elementos) {
+        // Si el elemento tiene el ID "content_second", quitar el atributo "hidden"
+        if (elemento.id == "content_second") {
+            elemento.removeAttribute("hidden");
+            // Cambiar el texto del segundo contenido a español
+            elemento.querySelector("p").textContent = "Segunda sección";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Validación de Usuario y Contraseña</title>
+    <script src="js/ac01ej2.js"></script> <!-- Vincula el archivo JavaScript -->
+</head>
+<body>
+    <h2>Inicio de Sesión</h2>
+    <form> <!-- El evento 'submit' es manejado por JavaScript -->
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required><br><br> <!-- Campo para el usuario -->
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required><br><br> <!-- Campo para la contraseña -->
+        <button type="submit">Iniciar Sesión</button> <!-- Botón para enviar -->
+    </form>
+    <p id="resultado"></p> <!-- Para mostrar el mensaje de validación -->
+</body>
+</html>
